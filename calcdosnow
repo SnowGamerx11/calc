@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular equação de adição</title>
+
+    <style>
+
+    #meubt {
+
+        background-color: #23b13f;
+    }
+
+    body { 
+
+        font: normal 15pt Arial;
+        background: #2d2b2b;
+        color: rgb(225, 225, 225);
+
+    }
+    input {
+        font: normal 15pt Arial;
+        color: white;
+        background: #2d2b2b;
+        outline-color: white;
+        width: 100;
+
+    }
+
+    div#res {
+        margin-top: 20pt;
+
+    }
+    </style>
+</head>
+<body>
+    <h1>Soma</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" id = "meubt" value="Somar" id = "bt" onclick="soma_quando_clicar()">
+    <div id="res">O resultado aparecera aqui</div>
+
+
+
+    <script>
+        
+        var butao = window.document.getElementById("meubt")
+        butao.addEventListener("mouseenter", passar_botao)
+        butao.addEventListener("mouseleave", sair_botao)
+        function passar_botao() {
+
+            butao.style.background = "#8ed29c"
+
+        }
+
+        function sair_botao() {
+            butao.style.background = "#23b13f"
+
+        }
+
+        function soma_quando_clicar() { 
+
+            resultado = window.document.getElementById("res")
+
+            tn1 = window.document.getElementById("txtn1")
+            tn2 = window.document.getElementById("txtn2")
+
+            n1 = Number(tn1.value)
+            n2 = Number(tn2.value)
+
+            var somar = n1 + n2
+
+            resultado.innerHTML = `a soma entre ${n1} + ${n2} é igual a  <strong>${somar}</strong>`
+
+
+
+        
+
+
+
+
+        }
+
+
+    </script>
+    
+</body>
+</html>
